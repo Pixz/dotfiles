@@ -6,8 +6,6 @@ echo 'upgrading'
 sudo apt-get upgrade -y
 echo 'installing softwares'
 sudo apt-get install -y python3 python3-dotenv python3-pip git zip unzip software-properties-common fzf 
-mkdir ~/.ohmyposh
-curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.ohmyposh
 echo 'configuring git'
 git config --global init.defaultBranch main
 git config --global user.name "pixz"
@@ -35,7 +33,6 @@ cat ~/.ssh/id_rsa.pub | clip.exe
 echo 'ssh pub key copied to clipboard'
 read -p "Copy ssh key into github account to continue and press Enter"
 
-cp -rf ./sources/.poshthemes  ~/
 
 mkdir ~/.bash_custom
 SH="${HOME}/.bashrc"
@@ -47,6 +44,7 @@ for file in ./sources/shell/*; do
     fi
 done
 
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 exec bash --login
 rm -rf ../dotfiles/
 
