@@ -35,6 +35,7 @@ read -p "Copy ssh key into github account, press Eneter to continue"
 
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+cp ./sources/.bashrc ~/
 mkdir ~/.bash_custom
 SH="${HOME}/.bashrc"
 for file in ./sources/shell/*; do
