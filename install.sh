@@ -6,7 +6,8 @@ echo 'upgrading'
 sudo apt-get upgrade -y
 echo 'installing softwares'
 sudo apt-get install -y python3 python3-dotenv python3-pip git zip unzip software-properties-common fzf 
-curl -s https://ohmyposh.dev/install.sh | bash -s
+mkdir ~/.ohmyposh
+curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.ohmyposh
 echo 'configuring git'
 git config --global init.defaultBranch main
 git config --global user.name "pixz"
@@ -33,7 +34,6 @@ ssh-keygen -m PEM -t rsa -b 4096
 cat ~/.ssh/id_rsa.pub | clip.exe 
 echo 'ssh pub key copied to clipboard'
 read -p "Copy ssh key into github account to continue and press Enter"
-git clone git@github.com:Pixz/dotfiles.git
 
 cp -rf ./sources/.poshthemes  ~/
 
