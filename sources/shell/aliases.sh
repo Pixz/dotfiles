@@ -24,7 +24,7 @@ alias dev='source venv/bin/activate'
 
 alias f='fzf'
 
-alias ga='git add *'
+alias ga='git add -A'
 alias gc='git commit -m'
 alias gpush='git push origin main'
 alias gpull='git pull origin main'

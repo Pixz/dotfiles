@@ -24,6 +24,9 @@ git config --global alias.llog "log --graph --name-status --pretty=format:\"%C(r
 git config --global alias.type "cat-file -t"
 git config --global alias.dump "cat-file -p"
 
+git remote remove origin
+git remote add origin git@github.com:Pixz/dotfiles
+
 echo 'installing pip general packages'
 pip install virtualenv requests python-dotenv discord 
 
