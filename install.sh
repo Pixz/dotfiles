@@ -56,5 +56,5 @@ for file in ./sources/shell/*; do
 	fi
 done
 
-bash -c "$(rm -rf ../dotfiles/)"
+bash -c "$(cd .. && rm -rf ../dotfiles/)"
 exec bash --login
