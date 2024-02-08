@@ -11,6 +11,7 @@ alias ..='cd ..'
 alias ...='cd  ../..'
 alias ....='cd ../../..'
 alias bashconfig='nano ~/.bashrc'
+alias n='nvim'
 
 alias py='python3'
 alias pip='pip3'
