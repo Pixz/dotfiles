@@ -1,0 +1,8 @@
+
+for file in ./sources/*; do
+    if [ -f "$file" ]; then
+        filename=$(basename "$file")
+        cp $file ~/
+    fi
+done
+cp -rf ./sources/.bashrc ~/
