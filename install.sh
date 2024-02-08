@@ -5,7 +5,8 @@ sudo apt-get update
 echo 'upgrading'
 sudo apt-get upgrade -y
 echo 'installing softwares'
-sudo apt-get install -y python3 python3-dotenv python3-pip git zip unzip software-properties-common fzf
+sudo apt-get install -y python3 python3-dotenv python3-pip git zip unzip software-properties-common fzf nvim
+sudo snap install nvim --classic
 echo 'configuring git'
 git config --global init.defaultBranch main
 git config --global user.name "pixz"
@@ -31,7 +32,7 @@ echo 'installing pip general packages'
 pip install virtualenv requests python-dotenv discord
 
 echo 'creating ssh key'
-ssh-keygen -m PEM -t rsa -b 4096
+# ssh-keygen -m PEM -t rsa -b 4096
 cat ~/.ssh/id_rsa.pub | clip.exe
 echo 'ssh pub key copied to clipboard'
 read -p "Copy ssh key into github account, press Enter to continue"
@@ -55,5 +56,5 @@ for file in ./sources/shell/*; do
 	fi
 done
 
-exec bash --login
 bash -c "$(rm -rf ../dotfiles/)"
+exec bash --login
