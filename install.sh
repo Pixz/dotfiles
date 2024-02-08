@@ -34,7 +34,7 @@ echo 'creating ssh key'
 ssh-keygen -m PEM -t rsa -b 4096
 cat ~/.ssh/id_rsa.pub | clip.exe 
 echo 'ssh pub key copied to clipboard'
-read -p "Copy ssh key into github account, press Eneter to continue"
+read -p "Copy ssh key into github account, press Enter to continue"
 
 
 curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh | bash
