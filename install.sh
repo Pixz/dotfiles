@@ -40,7 +40,7 @@ read -p "Copy ssh key into github account, press Enter to continue"
 curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh | bash
 # bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
-for file in ./sources/*; do
+for file in ./sources/{.,}*; do
     if [ -f "$file" ]; then
         filename=$(basename "$file")
         cp $file ~/
