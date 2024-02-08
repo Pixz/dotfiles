@@ -45,13 +45,11 @@ for file in ./sources/{.,}*; do
 		cp $file ~/
 	fi
 done
-cp -rf ./sources/.bashrc ~/
-mkdir ~/.bash_custom
+cp -rf ./sources/ ~/
 SH="${HOME}/.bashrc"
-for file in ./sources/shell/*; do
+for file in ~/.bash_custom/*; do
 	if [ -f "$file" ]; then
 		filename=$(basename "$file")
-		cp $file ~/.bash_custom/
 		echo "source ~/.bash_custom/"$filename"" >>"$SH"
 	fi
 done
