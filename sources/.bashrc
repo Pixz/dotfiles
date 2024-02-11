@@ -142,3 +142,7 @@ source "$OSH"/oh-my-bash.sh
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
+source ~/.bash_custom/aliases.sh
+source ~/.bash_custom/functions.sh
+source ~/.bash_custom/aliases.sh
+source ~/.bash_custom/functions.sh
