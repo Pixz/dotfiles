@@ -45,7 +45,7 @@ for file in ./sources/{.,}*; do
 		cp $file ~/
 	fi
 done
-cp -rf ./sources/ ~/
+cp -rf ./sources/* ~/
 SH="${HOME}/.bashrc"
 for file in ~/.bash_custom/*; do
 	if [ -f "$file" ]; then
