@@ -39,12 +39,6 @@ read -p "Copy ssh key into github account, press Enter to continue"
 
 curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh | bash
 
-# for file in ./sources/{.,}*; do
-# 	if [ -f "$file" ]; then
-# 		filename=$(basename "$file")
-# 		cp $file ~/
-# 	fi
-# done
 rsync -a ./sources/ ~/
 SH="${HOME}/.bashrc"
 for file in ~/.bash_custom/*; do
