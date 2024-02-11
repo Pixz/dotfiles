@@ -146,3 +146,5 @@ source ~/.bash_custom/aliases.sh
 source ~/.bash_custom/functions.sh
 source ~/.bash_custom/aliases.sh
 source ~/.bash_custom/functions.sh
+source ~/.bash_custom/aliases.sh
+source ~/.bash_custom/functions.sh
