@@ -54,5 +54,6 @@ else
 	echo "nothing to add"
 fi
 
+tmux source-file ~/.tmux.conf
 bash -c "$(cd .. && rm -rf ../dotfiles/)"
 exec bash --login
