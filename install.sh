@@ -41,12 +41,18 @@ curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/in
 
 rsync -a ./sources/ ~/
 SH="${HOME}/.bashrc"
-for file in ~/.bash_custom/*; do
-	if [ -f "$file" ]; then
-		filename=$(basename "$file")
-		echo "source ~/.bash_custom/"$filename"" >>"$SH"
-	fi
-done
+
+if grep -Fxq "functions.sh" ~/.bashrc; then
+
+	for file in ~/.bash_custom/*; do
+		if [ -f "$file" ]; then
+			filename=$(basename "$file")
+			echo "source ~/.bash_custom/"$filename"" >>"$SH"
+		fi
+	done
+else
+	echo "nothing to add"
+fi
 
 bash -c "$(cd .. && rm -rf ../dotfiles/)"
 exec bash --login

@@ -144,9 +144,5 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 source ~/.bash_custom/aliases.sh
 source ~/.bash_custom/functions.sh
-source ~/.bash_custom/aliases.sh
-source ~/.bash_custom/functions.sh
-source ~/.bash_custom/aliases.sh
-source ~/.bash_custom/functions.sh
-source ~/.bash_custom/aliases.sh
-source ~/.bash_custom/functions.sh
+
+[[ $TERM != "screen"]] && exec tmux 
