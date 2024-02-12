@@ -8,8 +8,8 @@ echo 'installing softwares'
 sudo apt-get install -y python3 python3-dotenv python3-pip git zip unzip software-properties-common fzf nvim
 sudo snap install nvim --classic
 echo 'configuring git'
-git config --global init.defaultBranch main
 git config --global user.name "pixz"
+git config --global init.defaultBranch main
 git config --global user.email "pixz.dev@gmail.com"
 git config --global alias.d diff
 git config --global alias.co checkout
@@ -43,15 +43,14 @@ rsync -a ./sources/ ~/
 SH="${HOME}/.bashrc"
 
 if grep -Fxq "functions.sh" ~/.bashrc; then
-
 	for file in ~/.bash_custom/*; do
 		if [ -f "$file" ]; then
 			filename=$(basename "$file")
 			echo "source ~/.bash_custom/"$filename"" >>"$SH"
 		fi
 	done
-else
 	echo "nothing to add"
+else
 fi
 
 tmux source-file ~/.tmux.conf
