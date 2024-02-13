@@ -49,8 +49,8 @@ if grep -Fxq "functions.sh" ~/.bashrc; then
 			echo "source ~/.bash_custom/"$filename"" >>"$SH"
 		fi
 	done
-	echo "nothing to add"
 else
+	echo "nothing to add"
 fi
 
 tmux source-file ~/.tmux.conf
