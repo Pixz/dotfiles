@@ -11,8 +11,6 @@ alias ..='cd ..'
 alias ...='cd  ../..'
 alias ....='cd ../../..'
 alias bashconfig='nano ~/.bashrc'
-alias n='nvim '
-alias t='tmux '
 alias cx='chmod +x '
 
 alias py='python3'
@@ -25,8 +23,6 @@ alias jup="jupyter-notebook --allow-root"
 
 alias dev='source venv/bin/activate'
 
-alias f='fzf'
-
 alias ga='git add -A'
 alias gc='git commit -m'
 alias gpush='git push origin main'
@@ -34,3 +30,8 @@ alias gpull='git pull origin main'
 alias gs='git status'
 
 alias pi='ssh pi@192.168.1.102'
+
+alias n='nvim '
+alias t='tmux '
+alias tk='tmux kill-session -a'
+alias f='fzf'
