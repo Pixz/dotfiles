@@ -11,6 +11,8 @@ vim.keymap.set("n", "<A-h>", ":MoveHChar(-1)<CR>", opts)
 vim.keymap.set("n", "<A-l>", ":MoveHChar(1)<CR>", opts)
 vim.keymap.set("n", "<leader>wf", ":MoveWord(1)<CR>", opts)
 vim.keymap.set("n", "<leader>wb", ":MoveWord(-1)<CR>", opts)
+vim.keymap.set("n", "<Tab>", ">>_", opts)
+vim.keymap.set("n", "<S-Tab>", "<<_", opts)
 
 -- Visual-mode commands
 vim.keymap.set("v", "<A-j>", ":MoveBlock(1)<CR>", opts)
