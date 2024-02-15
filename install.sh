@@ -5,7 +5,7 @@ sudo apt-get update
 echo 'upgrading'
 sudo apt-get upgrade -y
 echo 'installing softwares'
-sudo apt-get install -y python3 python3-dotenv python3-pip git zip unzip software-properties-common fzf nvim zoxide
+sudo apt-get install -y python3 python3-dotenv python3-pip git zip unzip software-properties-common fzf nvim
 sudo snap install nvim --classic
 echo 'configuring git'
 git config --global user.name "pixz"
@@ -38,6 +38,7 @@ echo 'ssh pub key copied to clipboard'
 read -p "Copy ssh key into github account, press Enter to continue"
 
 curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh | bash
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 
 rsync -a ./sources/ ~/
 SH="${HOME}/.bashrc"
