@@ -14,7 +14,7 @@ alias bashconfig='nano ~/.bashrc'
 alias n='nvim '
 alias t='tmux '
 alias cx='chmod +x '
-alias cd='z'
+alias tk='tmux kill-session -a'
 
 alias py='python3'
 alias pip='pip3'
@@ -35,4 +35,3 @@ alias gpull='git pull origin main'
 alias gs='git status'
 
 alias pi='ssh pi@192.168.1.102'
-alias rdev='cd /mnt/c/Users/a008116/OneDrive\ -\ Alliance/Documents/dev'
