@@ -5,7 +5,7 @@ sudo apt-get update
 echo 'upgrading'
 sudo apt-get upgrade -y
 echo 'installing softwares'
-sudo apt-get install -y python3 python3-dotenv python3-pip git zip unzip software-properties-common fzf nvim pipreqs rsync gcc
+sudo apt-get install -y python3 python3-dotenv python3-pip git zip unzip software-properties-common fzf neovim rsync gcc
 sudo snap install nvim --classic
 echo 'configuring git'
 git config --global user.name "pixz"
