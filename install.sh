@@ -32,10 +32,14 @@ echo 'installing pip general packages'
 pip install virtualenv requests python-dotenv discord
 
 echo 'creating ssh key'
-# ssh-keygen -m PEM -t rsa -b 4096
-cat ~/.ssh/id_rsa.pub | clip.exe
-echo 'ssh pub key copied to clipboard'
-read -p "Copy ssh key into github account, press Enter to continue"
+if [ ! -f ~/.ssh/id_rsa.pub ]; then
+	ssh-keygen -m PEM -t rsa -b 4096
+fi
+if command -v clip.exe &> /dev/null; then
+	cat ~/.ssh/id_rsa.pub | clip.exe
+	echo 'ssh pub key copied to clipboard'
+	read -p "Copy ssh key into github account, press Enter to continue"
+fi
 
 curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh | bash
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
