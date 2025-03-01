@@ -1,4 +1,5 @@
 #!/bin/bash
 
-cp -rf ~/.config/ ~/.bash_custom/ ~/dotfiles/sources/
-cp ~/.tmux.conf ~/.bashrc ~/dotfiles/sources/
+rsync -a ~/.config/ ~/dotfiles/sources/
+rsync -a ~/.bash_custom/ ~/dotfiles/sources/
+rsync -a ~/.tmux.conf ~/.bashrc ~/dotfiles/sources/
